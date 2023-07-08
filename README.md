@@ -100,7 +100,7 @@ The GET method is a HTTP method that is applied while requesting information fro
 
 **Request method**: `GET`
 
-**URL if using Local Host**: `http://localhost:3000/api/trips`
+**URL if using Local Host**: `http://localhost:3000/trips`
 
 <!-- **URL if using Postman** : `https://bookmyshow-project-backend.vercel.app/api/booking` -->
 
@@ -198,7 +198,7 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
 
 <!-- **URL if using Local Host**: [**http://localhost:8080/api/booking**](http://localhost:8080/api/booking) -->
 
-**URL if using Local Host** : `http://localhost:8080/api/trips/ticket-details`
+**URL if using Local Host** : `http://localhost:3000/trips/ticket-details`
 
 **Add required headers** : `Content-type : application/JSON`
 
@@ -314,6 +314,201 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
     ]
 }
 ``` -->
+
+**Code** : `500`
+
+**Content example**
+
+```json
+{
+    "error": "Internal Server Error"
+}
+```
+
+## GET
+
+The GET method is a HTTP method that is applied while requesting information from a particular source. It is also used to get a specific variable derived from a group.
+
+**GET request for filtered fetching based on passed parameters**
+
+**Request method**: `GET`
+
+**URL if using Local Host**: `localhost:3000/trips/parameter`
+
+**Available parameters**:`from, to, category`
+
+<!-- **URL if using Postman** : `https://bookmyshow-project-backend.vercel.app/api/booking` -->
+
+<!-- **Auth required** : YES -->
+
+**Example parameter**: `to: Mumbai`
+
+<!-- ```json
+{
+    "amenities_list": [],
+    "date": "",
+    "from": "",
+    "to": "",
+    "busOwnerID": "",
+    "startTime": "",
+    "EndTime": "",
+    "category": "",
+    "SeatBooked": [],
+    "bus_no": "",
+    "animeties_list": [],
+    "busFare": "",
+    "busName": ""
+}
+``` -->
+
+<!-- **Data example** -->
+
+<!-- ```json
+{
+    "movie": "Tenet",
+    "slot": "8:00 AM",
+    "seats": {
+        "A1": 9,
+        "A2": 2
+    }
+}
+``` -->
+
+### Success Response
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+[
+    {
+        "_id": {
+            "$oid": "64a2acf2a578c797f728c789"
+        },
+        "date": {
+            "$date": "2023-01-17T18:30:00.000Z"
+        },
+        "from": "ChIJL_P_CXMEDTkRw0ZdG-0GVvw",
+        "to": "Mumbai",
+        "busOwnerID": 123,
+        "startTime": {
+            "$date": "2023-01-17T18:30:00.000Z"
+        },
+        "EndTime": {
+            "$date": "2023-01-17T18:30:00.000Z"
+        },
+        "category": "A/C Sleeper (2+1)",
+        "SeatBooked": ["1UA", "3UA", "4LB", "4LC"],
+        "bus_no": "",
+        "amenities_list": [],
+        "busFare": 850,
+        "busName": "IntrCity Smart Bus",
+        "__v": 0
+    }
+]
+```
+
+### Error Response
+
+<!-- **Code** : `401 Unauthorized`
+
+**Content example**
+
+```json
+{
+    "error": "Please authenticate using a valid token"
+}
+``` -->
+
+**Code** : `500 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "error": "Internal server error"
+}
+```
+
+## POST
+
+POST is an HTTP method designed to send data to the server from an HTTP client. It requests the web server to accept the data enclosed in the body of the POST message.
+
+**POST request for adding NEW trips**
+
+**Request method**: `POST`
+
+<!-- **URL if using Local Host**: [**http://localhost:8080/api/booking**](http://localhost:8080/api/booking) -->
+
+**URL if using Local Host** : `http://localhost:3000/trips`
+
+**Add required headers** : `Content-type : application/JSON`
+
+<!-- **URL if using Postman** : `https://bookmyshow-project-backend.vercel.app/api/booking`
+
+**Auth required** : `YES` -->
+
+**Data constraints**
+
+```json
+{
+    "amenities_list": [],
+    "_id": "",
+    "date": "",
+    "from": "",
+    "to": "",
+    "busOwnerID": null,
+    "startTime": "",
+    "EndTime": "",
+    "category": "",
+    "SeatBooked": [],
+    "bus_no": "",
+    "animeties_list": [],
+    "busFare": null,
+    "busName": ""
+}
+```
+
+**Data example**
+
+```json
+{
+    "amenities_list": [],
+    "date": "2023-01-17T18:30:00.000Z",
+    "from": "ChIJL_P_CXMEDTkRw0ZdG-0GVvw",
+    "to": "ChIJbU60yXAWrjsR4E9-UejD3_g",
+    "busOwnerID": 123,
+    "startTime": "2023-01-17T18:30:00.000Z",
+    "EndTime": "2023-01-17T18:30:00.000Z",
+    "category": "A/C Sleeper (2+1)",
+    "SeatBooked": ["1UA", "3UA", "4LB", "4LC"],
+    "bus_no": "",
+    "animeties_list": [
+        "Live Tracking",
+        "Policies",
+        "Photos",
+        "Amenities",
+        "Reviews"
+    ],
+    "busFare": 850,
+    "busName": "IntrCity Smart Bus"
+}
+```
+
+### Success Response
+
+**Code** : `201 OK`
+
+**Content example**
+
+```json
+{
+    "message": "Trip added successfully."
+}
+```
+
+### Error Response
 
 **Code** : `500`
 
