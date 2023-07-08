@@ -11,9 +11,9 @@
   <a href="https://www.linkedin.com/in/kaustubh-sule-b46303229/ ">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="https://youtu.be/JkI1acKmYl0">
+  <!-- <a href="https://youtu.be/JkI1acKmYl0">
     <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
-  </a>
+  </a> -->
   <a href="https://twitter.com/KaustubhSule ">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
@@ -52,21 +52,21 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser. 
 <!-- <a href ="https://bookmyshow-project-frontend.vercel.app"/>
 Live Here
 </a> -->
+<!-- <br></br> -->
 
-<br></br>
 <b>Backend Deployment:</b>
 
 <!-- <a href="https://bookmyshow-project-backend.vercel.app"/>
 Live here
 </a> -->
 
-<br></br>
+<!-- <br></br> -->
 
 <!-- <b>Configure Database:</b>
 Open MongoDB Compass and use Mongo_URI given below
 (**Mongo_URI**="mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority") -->
 
- </br>
+ <!-- </br> -->
 
 ## Languages and Tools used:
 
@@ -90,7 +90,7 @@ Open MongoDB Compass and use Mongo_URI given below
 -   This API Documentation deals with the specifications of endpoints used in the full-stack project named the 'Reserve Bus' App.
 -   Various endpoints allow us to view available buses, book new tickets, view booking details, etc.
 <!-- - After successfully signing in, the user will be re-directed to Tickets Booking page. It has 2 methods for Movie Ticket Booking: GET and POST.  -->
--   The GET method will fetch the Last Booking details from the database associated with the user and display them under their respective section. The POST method will allow users to book movie tickets and store data in the database. An in-depth understanding of the usage of API endpoints is mentioned below.
+-   The GET method will fetch the Last Booking details from the database associated with the user and display them under their respective section. The POST method will allow users to book tickets and store data in the database. An in-depth understanding of the usage of API endpoints is mentioned below.
 
 ## GET
 
@@ -111,7 +111,6 @@ The GET method is a HTTP method that is applied while requesting information fro
 ```json
 {
     "amenities_list": [],
-    // "_id": "",
     "date": "",
     "from": "",
     "to": "",
